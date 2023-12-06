@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSnapshot } from "valtio";
 
+//import config from "../config/config";
 import state from "../store";
+//import { download } from "../assets";
 import { reader } from "../config/helpers";
 import { EditorTabs, FilterTabs, DecalTypes } from "../config/constants";
 import { fadeAnimation, slideAnimation } from "../config/motion";
@@ -56,7 +58,7 @@ const Customizer = () => {
       setGeneratingImg(true);
 
       const response = await fetch(
-        `${process.env.VITE_PROD_BACKEND_URL}/api/v1/dalle`,
+        `${import.meta.env.VITE_PROD_BACKEND_URL}/api/v1/dalle`,
         {
           method: "POST",
           headers: {
