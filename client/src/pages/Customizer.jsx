@@ -56,7 +56,7 @@ const Customizer = () => {
       setGeneratingImg(true);
 
       const response = await fetch(
-        `${process.env.REACT_APP_PROD_BACKEND_URL}/api/v1/dalle`,
+        `${process.env.VITE_PROD_BACKEND_URL}/api/v1/dalle`,
         {
           method: "POST",
           headers: {
